@@ -5,11 +5,88 @@ VTC Javascript library tutorial
 *********************************************/
 
 /*********************************************
+18. On click event, change src of img.
+*********************************************/
+/*
+// Global variables
+var setupTarg;
+var pictures;
+
+// When the page finishes loading.
+Event.observe(window, 'load', function(){
+	$$('#nav_section input').invoke('observe', 'click', loadArtData);
+});
+
+// Program logic
+function loadArtData(){
+	pictures = $('pictures_section');
+	setupTarg = this.id;
+	
+	// Change the img src
+	if(setupTarg === 'perky'){
+		pictures.setAttribute('src', '/img/Goth_Type_8__The_Perky_Goth_by_Trellia.jpg');
+
+	}
+	else if(setupTarg === 'j-goth'){
+		pictures.setAttribute('src', '/img/Goth_Type_6__The_J_Goth_by_Trellia.jpg');
+	}
+}*/
+
+
+/*********************************************
+17. Obtain ID of object clicked.
+*********************************************/
+/*
+// Global variables
+var setupTarg;
+
+// When the page finishes loading.
+Event.observe(window, 'load', function(){
+	// Call a new function.
+	$$('#sidebar a').invoke('observe', 'click', loadArtData);
+});
+
+// Program logic
+function loadArtData(event){
+	Event.stop(event);
+	setupTarg = this.id;
+	alert(setupTarg);
+}*/
+
+
+/*********************************************
+16. Calling a function  
+*********************************************/
+/*
+// When the page finishes loading.
+Event.observe(window, 'load', function(){
+	// Call a new function.
+	$$('#sidebar a').invoke('observe', 'click', loadArtData);
+});
+
+// Stops link from changing page.
+function loadArtData(event){
+	Event.stop(event);
+}*/
+
+
+/*********************************************
+15. Onclick in prototype.
+*********************************************/
+/*// When the page finishes loading.
+Event.observe(window, 'load', function () {
+  // Output the message on a link click.
+  $$('#sidebar a').invoke('observe', 'click', function () {
+    alert("What are you doing?");
+  });
+});
+*/
+/*********************************************
 14. Event handling in protoype.
 *********************************************/
-Event.observe(window, 'load', function() {
+/*Event.observe(window, 'load', function() {
   alert("hello dave");
-});
+});*/
 
 /*********************************************
 13. Adding at run time.
