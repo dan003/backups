@@ -1,14 +1,22 @@
 /*********************************************
 Daniel Jenkins
 O'reilly Javascript tutorial
+VTC Javascript library tutorial
 *********************************************/
+
+/*********************************************
+14. Event handling in protoype.
+*********************************************/
+Event.observe(window, 'load', function() {
+  alert("hello dave");
+});
 
 /*********************************************
 13. Adding at run time.
 *********************************************/
 
-/*// When the page finishes loading.
-window.onload = function () {
+// When the page finishes loading.
+/*window.onload = function () {
   // Initializing variables.
   var fruit_one = "mango";
   var main = document.getElementById("main");
@@ -27,7 +35,7 @@ window.onload = function () {
 12. Onclick event evoking a function
 *********************************************/
 
-// When the page finishes loading.
+/*// When the page finishes loading.
 window.onload = function () {
   // Initializing variables.
   var button_submit = document.getElementById("submit_section");
@@ -49,7 +57,7 @@ window.onload = function () {
   };
   // Output the message.
   main.appendChild(output);
-};
+};*/
 
 
 /*********************************************
@@ -136,8 +144,8 @@ output.innerHTML = (result);*/
 7. Nested objects, coordiates of a square
 *********************************************/
 
-// When the page finishes loading.
-/*window.onload = function () {
+/*// When the page finishes loading.
+window.onload = function () {
   // Initializing variables.
   var main = document.getElementById("main");
   var output = document.createElement("h2");
