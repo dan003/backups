@@ -1,0 +1,85 @@
+/*****************************************************
+Daniel Jenkins
+Two column layouts, degrades nice in older browsers
+*****************************************************/
+
+body{
+    font: medium arial, trebuchet, tahoma;
+    background: #BBB;
+    margin:0;
+    padding:0 0 20px;/*simulate bottom margin on wrapper for IE*/
+}
+
+h1{
+    margin:0;
+    padding:15px;
+    background: transparent;
+    text-align:center;
+    font:bold 160% "courier new";
+}
+h2 {
+    margin:0;
+    padding:5px 10px;
+    font:bold 160% "courier new";
+}
+
+/*****************************************************
+5. Header section
+*****************************************************/
+.header {
+  overflow: auto; /* Managing floats */
+}
+/*****************************************************
+4. Sidebar section
+*****************************************************/    
+.sidebar {
+    width:198px;
+    float:left;
+    background: transparent;
+    
+}
+
+/*****************************************************
+3. Main section
+*****************************************************/
+
+.inner {
+    width:100%;/*IE6 haslayout*/
+    overflow:hidden; /*contain floats*/
+    background: #fff url(/img/faux_col.png) repeat-y;
+}
+
+.main {
+    background: transparent;
+    margin-left: 198px;
+}
+
+.wrapper{
+  background-color: #fff;
+}
+
+
+/*****************************************************
+2. Footer section
+*****************************************************/
+.footer{
+  border-top: 2px solid black;
+}
+
+/*****************************************************
+1. Common patterns
+*****************************************************/
+.sidebar, .main {
+  border-top:10px solid #000;
+}
+
+.header, .inner, .footer {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.header, .footer{  
+  background-color: transparent;
+}
+
+
