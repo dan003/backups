@@ -5,20 +5,101 @@ VTC Javascript library tutorial
 *********************************************/
 
 /*********************************************
+21. Recursion with a break case.
+*********************************************/
+
+/*
+// When the page finishes loading.
+Event.observe(window, 'load', function(){
+	// Initializing variables.
+	var ans, main, output;
+	
+	var num = 5;
+	
+	// Recursive factorial function
+	function factorial(x){
+		if(x <= 1){
+			return 1;
+		}
+		
+		return x * factorial(x - 1);
+	}
+	
+	// Program logic
+	ans = factorial(num);
+	main = $('main');
+	output = new Element('p').update(ans);
+	main.insert(output);
+});*/
+
+/*********************************************
+20. The idea of scope.
+*********************************************/
+/*
+// When the page finishes loading.
+Event.observe(window, 'load', function(){
+	// Initializing variables.
+	var ans, main, output;
+	
+	var i, j;
+	i = 2;
+	j = 3;
+	var k = 3;
+	
+	// Program logic
+	if(i === j){
+		if (j === k) {
+			ans = "i equals k"; 
+		}
+	}
+	else{
+		ans = "i does not equal j";
+	}
+	
+	main = $('main');
+	output = new Element('p').update(ans);
+	main.insert(output);
+	
+});*/
+
+/*********************************************
+19. Prototype: convert number to hex equivalent.
+*********************************************/
+
+/*
+function convertHex(x){
+	switch(typeof x){
+		case 'number':
+			return x.toString(16);
+		case 'string':
+			return "'" + x  + "'";
+		default:
+			return String(x);
+		}
+	}
+	
+// When the page finishes loading.
+Event.observe(window, 'load', function(){
+	// Initializing variables.
+	var ans, main, output;
+	var num = 255;
+	
+	// Program logic
+	ans = convertHex(num);
+	main = $('main');
+	output = new Element('p').update(ans);
+	main.insert(output);
+});*/
+
+/*********************************************
 18. On click event, change src of img.
 *********************************************/
 /*
-// Global variables
-var setupTarg;
-var pictures;
-
-// When the page finishes loading.
-Event.observe(window, 'load', function(){
-	$$('#nav_section input').invoke('observe', 'click', loadArtData);
-});
-
 // Program logic
 function loadArtData(){
+	// Initializing variables.
+	var setupTarg;
+	var pictures;
 	pictures = $('pictures_section');
 	setupTarg = this.id;
 	
@@ -30,8 +111,13 @@ function loadArtData(){
 	else if(setupTarg === 'j-goth'){
 		pictures.setAttribute('src', '/img/Goth_Type_6__The_J_Goth_by_Trellia.jpg');
 	}
-}*/
+}
 
+// When the page finishes loading.
+Event.observe(window, 'load', function(){
+	$$('#main input').invoke('observe', 'click', loadArtData);
+});
+*/
 
 /*********************************************
 17. Obtain ID of object clicked.
@@ -52,7 +138,6 @@ function loadArtData(event){
 	setupTarg = this.id;
 	alert(setupTarg);
 }*/
-
 
 /*********************************************
 16. Calling a function  
@@ -81,6 +166,7 @@ Event.observe(window, 'load', function () {
   });
 });
 */
+
 /*********************************************
 14. Event handling in protoype.
 *********************************************/
@@ -135,7 +221,6 @@ window.onload = function () {
   // Output the message.
   main.appendChild(output);
 };*/
-
 
 /*********************************************
 11. The for loop, printing the index while it iterates.
@@ -194,7 +279,6 @@ function addf(x, y) {
 
 // Output result.
 output.innerHTML = (addf(num1, num2));*/
-
 
 /*********************************************
 8. The switch statement.
