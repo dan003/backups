@@ -5,6 +5,46 @@ VTC Javascript library tutorial
 *********************************************/
 
 /*********************************************
+22. Read user input, output only once.
+*********************************************/
+// When the page finishes loading.
+window.onload = function () {
+	
+	// Function that appends a greeting
+	function addGreeting(){
+		// Initializing variables.
+    var greeting = "Hello "; 
+    var main = document.getElementById("main");
+    var h2 = document.createElement('h2');
+    h2.classList.add('greeting');
+    
+    // Read user input
+    var text_section = document.getElementById("text_section");
+    var name = text_section.value;
+    
+    // Program logic
+    greeting += name;
+    h2.innerHTML = (greeting);
+    
+    // Output the message.
+ 		main.appendChild(h2);
+ 		 
+	}
+	
+  // Initializing variables.
+  var button_submit = document.getElementById("submit_section");
+  
+  button_submit.onclick = function () {
+    
+    // Check for previous user click
+    var output = document.querySelector('.greeting');
+    if (!output) {
+	    output = addGreeting(main);
+		}
+    
+  };
+};
+/*********************************************
 21. Recursion with a break case.
 *********************************************/
 
