@@ -5,8 +5,22 @@ VTC Javascript library tutorial
 *********************************************/
 
 /*********************************************
+23. Centering image vertically
+*********************************************/
+// When the page finishes loading.
+Event.observe(window, 'load', function(){
+	// Initializing variables.
+	var parentHeight = $('header').getHeight();
+	var childHeight = $('logo').getHeight();
+	$('logo').setStyle({
+		top: (parentHeight - childHeight) / 2 + 'px'
+	});
+});
+
+/*********************************************
 22. Read user input, output only once.
 *********************************************/
+/*
 // When the page finishes loading.
 window.onload = function () {
 	
@@ -43,7 +57,8 @@ window.onload = function () {
 		}
     
   };
-};
+};*/
+
 /*********************************************
 21. Recursion with a break case.
 *********************************************/
